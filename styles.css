@@ -46,6 +46,11 @@ body{
     background-color: black;
 }
 
+.active{
+    color: black;
+    background-color: white;
+}
+
 .main_content{
     margin-top:60px;
     background-color: green;
