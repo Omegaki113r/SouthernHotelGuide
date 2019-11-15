@@ -1,3 +1,8 @@
+
+/*
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0%;
     padding: 0%;
@@ -12,6 +17,7 @@ body{
     width: 100%;
     height: 60px;
     font-family: 'Courier New', Courier, monospace;
+    z-index: 999 !important;
 }
 
 .navigation_bar .logo{
@@ -27,6 +33,18 @@ body{
     margin-left: 10px;
 }
 
+.nostyle:link{
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+.nostyle:visited{
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
 .navigation_bar .nav_list{
     font-size: 15px;
 }
@@ -39,6 +57,7 @@ body{
 .navigation_bar ul li{
     float: left;
     padding: 5px;
+    cursor: pointer;
 }
 
 .navigation_bar ul li:hover{
@@ -53,7 +72,6 @@ body{
 
 .main_content{
     margin-top:60px;
-    background-color: green;
 }
 
 .main_content h1{
@@ -61,25 +79,57 @@ body{
     padding: 0%;
 }
 
-.home{
+#home{
     width: 100%;
-    height: 750px;
-    background-color: rgb(25, 51, 0);
+    height: auto;
 }
-.gallery{
+
+#gallery_div{
     width: 100%;
-    height: 750px;
-    background-color: rgb(247, 0, 255);
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: scroll;
+    padding-top: 5%;
+
+    text-align: center;
 }
-.about_us{
-    width: 100%;
-    height: 750px;
-    background-color: rgb(0, 195, 255);
+
+#gallery_div h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
 }
-.contact_us{
+
+.gallery {
+    border: 1px solid #ccc;
+    margin: 5px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 20%;
+    float: left;
+}
+  
+.gallery:hover {
+    border: 1px solid #777;
+}
+  
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+  
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+#about_us{
     width: 100%;
     height: 750px;
-    background-color: rgb(0, 255, 13);
+}
+#contact_us{
+    width: 100%;
+    height: 750px;
 }
 
 .footer{
@@ -97,3 +147,209 @@ body{
     padding: 5px;
     margin: 0%;
 }
+
+
+.carousel {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
+
+.slide-container{
+    -webkit-transition: all 2000ms ease;
+  	-moz-transition: all 2000ms ease;
+  	-ms-transition: all 2000ms ease;
+  	-o-transition: all 2000ms ease;
+  	transition: all 2000ms ease;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.top_nav_bar{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+}
+
+.image_holder{
+    width: 10%;
+    background-color: white;
+    margin: 5px;
+}
+
+.nav_item_holder{
+    flex-grow: 90;
+    height: 100%;
+    height: vh;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.unordered_list_nav_item{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    width: 45vw;
+    justify-content: space-between;
+    margin-right: 1%;
+}
+
+.main_content{
+    background-color: green;
+}
+
+.footer{
+    background-color: blue;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
